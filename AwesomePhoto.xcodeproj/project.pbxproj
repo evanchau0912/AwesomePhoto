@@ -20,11 +20,12 @@
 		880C9802224A819300034B36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 880C9801224A819300034B36 /* GoogleService-Info.plist */; };
 		880C9803224A819300034B36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 880C9801224A819300034B36 /* GoogleService-Info.plist */; };
 		880C9804224A819300034B36 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 880C9801224A819300034B36 /* GoogleService-Info.plist */; };
+		882B4D60226628FD0046C0EC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4D5F226628FD0046C0EC /* WelcomeViewController.swift */; };
+		882B4D62226633C20046C0EC /* TutorialCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4D61226633C20046C0EC /* TutorialCollectionViewController.swift */; };
+		882B4D642266347E0046C0EC /* TutorialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882B4D632266347E0046C0EC /* TutorialCollectionViewCell.swift */; };
 		886666A0225658A900729954 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8866669F225658A900729954 /* LoginViewController.swift */; };
 		886666A222565FA600729954 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886666A122565FA600729954 /* HomeViewController.swift */; };
 		88C9F4BC224FA34A00FDAF0F /* WaterMarlkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C9F4BB224FA34A00FDAF0F /* WaterMarlkViewController.swift */; };
-		88E1EF012261CCDB00B61F9B /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E1EEFF2261CCDB00B61F9B /* TutorialViewController.swift */; };
-		88E1EF022261CCDB00B61F9B /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E1EF002261CCDB00B61F9B /* TutorialViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,11 +66,12 @@
 		880C97EF224A66DC00034B36 /* AwesomePhotoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomePhotoUITests.swift; sourceTree = "<group>"; };
 		880C97F1224A66DC00034B36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		880C9801224A819300034B36 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		882B4D5F226628FD0046C0EC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		882B4D61226633C20046C0EC /* TutorialCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCollectionViewController.swift; sourceTree = "<group>"; };
+		882B4D632266347E0046C0EC /* TutorialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCollectionViewCell.swift; sourceTree = "<group>"; };
 		8866669F225658A900729954 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		886666A122565FA600729954 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		88C9F4BB224FA34A00FDAF0F /* WaterMarlkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMarlkViewController.swift; sourceTree = "<group>"; };
-		88E1EEFF2261CCDB00B61F9B /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		88E1EF002261CCDB00B61F9B /* TutorialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
 		CDD3DF883AE3DBA2B8DE5EB6 /* Pods-AwesomePhotoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomePhotoUITests.release.xcconfig"; path = "Target Support Files/Pods-AwesomePhotoUITests/Pods-AwesomePhotoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D6B94EBD5B9346A19022530B /* Pods-AwesomePhoto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomePhoto.debug.xcconfig"; path = "Target Support Files/Pods-AwesomePhoto/Pods-AwesomePhoto.debug.xcconfig"; sourceTree = "<group>"; };
 		FC1E52EC79D98889CE02869F /* Pods-AwesomePhotoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomePhotoUITests.debug.xcconfig"; path = "Target Support Files/Pods-AwesomePhotoUITests/Pods-AwesomePhotoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,8 +189,9 @@
 		88E1EEFE2261CCBC00B61F9B /* Tutorial Screen */ = {
 			isa = PBXGroup;
 			children = (
-				88E1EEFF2261CCDB00B61F9B /* TutorialViewController.swift */,
-				88E1EF002261CCDB00B61F9B /* TutorialViewController.xib */,
+				882B4D5F226628FD0046C0EC /* WelcomeViewController.swift */,
+				882B4D61226633C20046C0EC /* TutorialCollectionViewController.swift */,
+				882B4D632266347E0046C0EC /* TutorialCollectionViewCell.swift */,
 			);
 			path = "Tutorial Screen";
 			sourceTree = "<group>";
@@ -302,7 +305,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				880C97DA224A66DB00034B36 /* LaunchScreen.storyboard in Resources */,
-				88E1EF022261CCDB00B61F9B /* TutorialViewController.xib in Resources */,
 				880C9802224A819300034B36 /* GoogleService-Info.plist in Resources */,
 				880C97D7224A66DB00034B36 /* Assets.xcassets in Resources */,
 				880C97D5224A66DB00034B36 /* Main.storyboard in Resources */,
@@ -431,8 +433,10 @@
 				886666A0225658A900729954 /* LoginViewController.swift in Sources */,
 				88C9F4BC224FA34A00FDAF0F /* WaterMarlkViewController.swift in Sources */,
 				880C97D2224A66DB00034B36 /* RegisterViewController.swift in Sources */,
-				88E1EF012261CCDB00B61F9B /* TutorialViewController.swift in Sources */,
+				882B4D642266347E0046C0EC /* TutorialCollectionViewCell.swift in Sources */,
+				882B4D62226633C20046C0EC /* TutorialCollectionViewController.swift in Sources */,
 				880C97D0224A66DB00034B36 /* AppDelegate.swift in Sources */,
+				882B4D60226628FD0046C0EC /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
