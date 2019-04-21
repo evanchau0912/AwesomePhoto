@@ -212,6 +212,7 @@
                                 </state>
                                 <connections>
                                     <action selector="startTapped:" destination="iTW-We-cEO" eventType="touchUpInside" id="AEg-AZ-IvK"/>
+                                    <segue destination="E3s-En-WYV" kind="show" id="rJ6-Rg-vTb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -247,10 +248,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tlw-9L-nRW">
-                                <rect key="frame" x="0.0" y="20" width="320" height="488"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tlw-9L-nRW">
+                                <rect key="frame" x="0.0" y="20" width="320" height="468"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ibJ-mc-Rnn">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ibJ-mc-Rnn">
                                     <size key="itemSize" width="234" height="158"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -258,7 +259,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="FdB-5b-CAt" customClass="TutorialCollectionViewCell" customModule="AwesomePhoto" customModuleProvider="target">
-                                        <rect key="frame" x="43" y="0.0" width="234" height="158"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="158"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="234" height="158"/>
@@ -281,23 +282,48 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="RKj-Db-Ga3">
+                                <rect key="frame" x="140.5" y="503" width="39" height="37"/>
+                                <color key="pageIndicatorTintColor" red="1" green="0.023031799024882504" blue="0.92275567218380505" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fn5-RT-HA0">
+                                <rect key="frame" x="22" y="518" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backTapped:" destination="E3s-En-WYV" eventType="touchUpInside" id="vSc-O6-gv2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvm-k9-3dN">
+                                <rect key="frame" x="254" y="520" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextTapped:" destination="E3s-En-WYV" eventType="touchUpInside" id="2T1-dz-opl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cbn-fJ-VaZ" firstAttribute="bottom" secondItem="tlw-9L-nRW" secondAttribute="bottom" constant="60" id="E9W-75-aPw"/>
+                            <constraint firstItem="cbn-fJ-VaZ" firstAttribute="bottom" secondItem="tlw-9L-nRW" secondAttribute="bottom" constant="80" id="E9W-75-aPw"/>
                             <constraint firstItem="tlw-9L-nRW" firstAttribute="top" secondItem="cbn-fJ-VaZ" secondAttribute="top" id="Ll7-H5-GnN"/>
                             <constraint firstItem="cbn-fJ-VaZ" firstAttribute="trailing" secondItem="tlw-9L-nRW" secondAttribute="trailing" id="USL-aa-wuW"/>
                             <constraint firstItem="tlw-9L-nRW" firstAttribute="leading" secondItem="cbn-fJ-VaZ" secondAttribute="leading" id="XUD-Cm-E6U"/>
+                            <constraint firstItem="RKj-Db-Ga3" firstAttribute="top" secondItem="tlw-9L-nRW" secondAttribute="bottom" constant="15" id="f0S-9l-jWf"/>
+                            <constraint firstItem="RKj-Db-Ga3" firstAttribute="centerX" secondItem="eBM-nE-43y" secondAttribute="centerX" id="k8k-bY-J2R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cbn-fJ-VaZ"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="Fn5-RT-HA0" id="3m2-wt-zk1"/>
                         <outlet property="collectionView" destination="tlw-9L-nRW" id="moX-lS-sDS"/>
+                        <outlet property="nextButton" destination="Hvm-k9-3dN" id="uIZ-IX-oVz"/>
+                        <outlet property="pageControl" destination="RKj-Db-Ga3" id="cG7-Q9-lpt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RoW-JU-FtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4451.25" y="-844.0140845070423"/>
+            <point key="canvasLocation" x="4341" y="-1113"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="sed-Dp-UWJ">

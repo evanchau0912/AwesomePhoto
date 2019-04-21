@@ -11,37 +11,66 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class TutorialCollectionViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TutorialCollectionViewCell
-        
-        return cell
-    }
-    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var pageControl: UIPageControl!
     
-    var imageArr: [String] = []
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    var cellWidth: CGFloat = 0
+    var cellHeight: CGFloat = 0
+    
+    var imageArr: [String] = ["tutorial-1","tutorial-2","tutorial-3"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        
+        pageControl.currentPage = 0
+        pageControl.numberOfPages = 3
+        pageControl.pageIndicatorTintColor = .black
+        pageControl.currentPageIndicatorTintColor = .red
+    }
+    
+    override func viewDidLayoutSubviews() {
+        cellWidth = self.collectionView.bounds.size.width
+        cellHeight = self.collectionView.bounds.size.height
+    }
+    
+    @IBAction func backTapped(_ sender: Any) {
+        
+    }
+    
+    
+    @IBAction func nextTapped(_ sender: Any) {
+        
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imageArr.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TutorialCollectionViewCell
+        cell.imageView.image = UIImage(named: imageArr[indexPath.row])
+        pageControl.currentPage = indexPath.row
+        return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width/2, height: self.view.frame.height/2)
+        return CGSize(width: cellWidth , height: cellHeight )
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
     }
     
 }
