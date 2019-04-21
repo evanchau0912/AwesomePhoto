@@ -1,5 +1,5 @@
 //
-//  HomeController.swift
+//  MainPersonalController.swift
 //  SideMenu
 //
 //  Created by namtranx on 4/20/19.
@@ -9,13 +9,31 @@
 import Foundation
 import UIKit
 
+private let reuseIdentifier = "personalCollectionViewCell"
+
 class MainPersonalController:UIViewController{
+    
+    @IBOutlet weak var topView: UIView!
+    
+    @IBOutlet weak var avtImageView: UIImageView!
+    
+    @IBOutlet weak var uploadPhotoImageView: UIImageView!
+    
     var delegate: PersonalControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        configNavigationBar()
+        updateUI()
+        
+        //view.backgroundColor = .white
+        //configNavigationBar()
+    }
+    
+    func updateUI(){
+        avtImageView.layer.cornerRadius = avtImageView.frame.height / 2.0
+        avtImageView.layer.masksToBounds = true
+        uploadPhotoImageView.layer.cornerRadius = uploadPhotoImageView.frame.height/2
+        uploadPhotoImageView.layer.masksToBounds = true
     }
     
     func configNavigationBar(){
