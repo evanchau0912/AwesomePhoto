@@ -16,7 +16,9 @@ class TutorialCollectionViewController: UIViewController, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TutorialCollectionViewCell
+        
+        return cell
     }
     
     
@@ -39,7 +41,7 @@ class TutorialCollectionViewController: UIViewController, UICollectionViewDelega
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+        return CGSize(width: self.view.frame.width/2, height: self.view.frame.height/2)
     }
     
 }
