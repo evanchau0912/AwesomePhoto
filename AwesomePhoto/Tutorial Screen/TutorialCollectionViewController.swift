@@ -36,6 +36,7 @@ class TutorialCollectionViewController: UIViewController, UICollectionViewDelega
     }
     
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         cellWidth = self.collectionView.bounds.size.width
         cellHeight = self.collectionView.bounds.size.height
     }

@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 private let reuseIdentifier = "personalCollectionViewCell"
+var cellWidth: CGFloat = 0
+var cellHeight: CGFloat = 0
 
 class MainPersonalController:UIViewController{
     
@@ -19,14 +21,25 @@ class MainPersonalController:UIViewController{
     
     @IBOutlet weak var uploadPhotoImageView: UIImageView!
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var delegate: PersonalControllerDelegate?
+    
+    var arrImages: [String] = ["tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1","tutorial-1"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        
+        collectionView.delegate = self
+        collectionView.dataSource = self
         //view.backgroundColor = .white
         //configNavigationBar()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        cellWidth = self.collectionView.bounds.size.width
+        cellHeight = self.collectionView.bounds.size.height
     }
     
     func updateUI(){
@@ -48,4 +61,32 @@ class MainPersonalController:UIViewController{
         print("toggle menu..")
         delegate?.handleMenuToggle()
     }
+}
+
+extension MainPersonalController:  UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: cellWidth/2, height: cellHeight/2)
+    }
+    
+    
+}
+
+extension MainPersonalController: UICollectionViewDataSource{
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrImages.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! UICollectionViewCell
+        let imgView = cell.viewWithTag(100) as! UIImageView
+        imgView.image = UIImage(named: arrImages[indexPath.row])
+        return cell
+    }
+    
+    
 }

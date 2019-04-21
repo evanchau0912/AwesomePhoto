@@ -567,23 +567,34 @@
                                     <constraint firstItem="M6o-SW-afv" firstAttribute="centerY" secondItem="QbD-43-5sx" secondAttribute="centerY" id="rC5-ge-Iy1"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E6s-Sj-M5M">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="E6s-Sj-M5M">
                                 <rect key="frame" x="0.0" y="376" width="375" height="353"/>
                                 <color key="backgroundColor" red="1" green="0.81091640330000003" blue="0.2398056432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jEW-oP-vSZ">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="92" height="85"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="personalCollectionViewCell" id="jRm-l9-dZ9">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="85"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="92" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OXH-g5-iqm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="85"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="OXH-g5-iqm" secondAttribute="trailing" id="6RX-EJ-Pz3"/>
+                                            <constraint firstItem="OXH-g5-iqm" firstAttribute="top" secondItem="jRm-l9-dZ9" secondAttribute="top" id="lMN-fr-25A"/>
+                                            <constraint firstItem="OXH-g5-iqm" firstAttribute="leading" secondItem="jRm-l9-dZ9" secondAttribute="leading" id="t3m-OE-9Jk"/>
+                                            <constraint firstAttribute="bottom" secondItem="OXH-g5-iqm" secondAttribute="bottom" id="zo6-21-gKz"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -607,6 +618,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="avtImageView" destination="wnR-Ph-xB1" id="orB-rm-c7U"/>
+                        <outlet property="collectionView" destination="E6s-Sj-M5M" id="KEE-1f-DCe"/>
                         <outlet property="topView" destination="ECt-3e-a0r" id="LeN-bx-K80"/>
                         <outlet property="uploadPhotoImageView" destination="Q3A-Yn-Vr8" id="kLS-Mi-3iw"/>
                     </connections>
