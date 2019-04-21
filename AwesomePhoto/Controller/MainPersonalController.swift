@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-class HomeController:UIViewController{
-    var delegate: HomeControllerDelegate?
+class MainPersonalController:UIViewController{
+    var delegate: PersonalControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

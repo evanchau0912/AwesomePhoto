@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18F5EFCB226B2D5B004E95C2 /* MenuOptionTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5EFCA226B2D5B004E95C2 /* MenuOptionTblCell.swift */; };
-		18F5EFCF226B2D93004E95C2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5EFCC226B2D93004E95C2 /* HomeController.swift */; };
+		18F5EFCF226B2D93004E95C2 /* MainPersonalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5EFCC226B2D93004E95C2 /* MainPersonalController.swift */; };
 		18F5EFD0226B2D93004E95C2 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5EFCD226B2D93004E95C2 /* MenuController.swift */; };
 		18F5EFD1226B2D93004E95C2 /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5EFCE226B2D93004E95C2 /* ContainerController.swift */; };
 		18F5EFD3226B2DA7004E95C2 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5EFD2226B2DA7004E95C2 /* Protocol.swift */; };
@@ -31,6 +31,10 @@
 		886666A0225658A900729954 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8866669F225658A900729954 /* LoginViewController.swift */; };
 		886666A222565FA600729954 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886666A122565FA600729954 /* HomeViewController.swift */; };
 		88C9F4BC224FA34A00FDAF0F /* WaterMarlkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C9F4BB224FA34A00FDAF0F /* WaterMarlkViewController.swift */; };
+		88E85FC7226C0D7E00D39E29 /* MainHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E85FC6226C0D7E00D39E29 /* MainHomeViewController.swift */; };
+		88E85FC9226C0DA600D39E29 /* MainSharePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E85FC8226C0DA600D39E29 /* MainSharePageViewController.swift */; };
+		88E85FCB226C0E3900D39E29 /* MainUploadedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E85FCA226C0E3900D39E29 /* MainUploadedViewController.swift */; };
+		88E85FCD226C0E8900D39E29 /* MainPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E85FCC226C0E8900D39E29 /* MainPaymentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +57,7 @@
 /* Begin PBXFileReference section */
 		189F71615512C31A52BBDD7E /* Pods-AwesomePhoto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomePhoto.release.xcconfig"; path = "Target Support Files/Pods-AwesomePhoto/Pods-AwesomePhoto.release.xcconfig"; sourceTree = "<group>"; };
 		18F5EFCA226B2D5B004E95C2 /* MenuOptionTblCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuOptionTblCell.swift; sourceTree = "<group>"; };
-		18F5EFCC226B2D93004E95C2 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		18F5EFCC226B2D93004E95C2 /* MainPersonalController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPersonalController.swift; sourceTree = "<group>"; };
 		18F5EFCD226B2D93004E95C2 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		18F5EFCE226B2D93004E95C2 /* ContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
 		18F5EFD2226B2DA7004E95C2 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
@@ -82,6 +86,10 @@
 		8866669F225658A900729954 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		886666A122565FA600729954 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		88C9F4BB224FA34A00FDAF0F /* WaterMarlkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMarlkViewController.swift; sourceTree = "<group>"; };
+		88E85FC6226C0D7E00D39E29 /* MainHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeViewController.swift; sourceTree = "<group>"; };
+		88E85FC8226C0DA600D39E29 /* MainSharePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSharePageViewController.swift; sourceTree = "<group>"; };
+		88E85FCA226C0E3900D39E29 /* MainUploadedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUploadedViewController.swift; sourceTree = "<group>"; };
+		88E85FCC226C0E8900D39E29 /* MainPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPaymentViewController.swift; sourceTree = "<group>"; };
 		CDD3DF883AE3DBA2B8DE5EB6 /* Pods-AwesomePhotoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomePhotoUITests.release.xcconfig"; path = "Target Support Files/Pods-AwesomePhotoUITests/Pods-AwesomePhotoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D6B94EBD5B9346A19022530B /* Pods-AwesomePhoto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomePhoto.debug.xcconfig"; path = "Target Support Files/Pods-AwesomePhoto/Pods-AwesomePhoto.debug.xcconfig"; sourceTree = "<group>"; };
 		FC1E52EC79D98889CE02869F /* Pods-AwesomePhotoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomePhotoUITests.debug.xcconfig"; path = "Target Support Files/Pods-AwesomePhotoUITests/Pods-AwesomePhotoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,8 +143,12 @@
 			isa = PBXGroup;
 			children = (
 				18F5EFCE226B2D93004E95C2 /* ContainerController.swift */,
-				18F5EFCC226B2D93004E95C2 /* HomeController.swift */,
+				18F5EFCC226B2D93004E95C2 /* MainPersonalController.swift */,
 				18F5EFCD226B2D93004E95C2 /* MenuController.swift */,
+				88E85FC6226C0D7E00D39E29 /* MainHomeViewController.swift */,
+				88E85FC8226C0DA600D39E29 /* MainSharePageViewController.swift */,
+				88E85FCA226C0E3900D39E29 /* MainUploadedViewController.swift */,
+				88E85FCC226C0E8900D39E29 /* MainPaymentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -470,12 +482,16 @@
 			files = (
 				886666A222565FA600729954 /* HomeViewController.swift in Sources */,
 				18F5EFD1226B2D93004E95C2 /* ContainerController.swift in Sources */,
+				88E85FCD226C0E8900D39E29 /* MainPaymentViewController.swift in Sources */,
+				88E85FC7226C0D7E00D39E29 /* MainHomeViewController.swift in Sources */,
 				18F5EFD0226B2D93004E95C2 /* MenuController.swift in Sources */,
 				886666A0225658A900729954 /* LoginViewController.swift in Sources */,
+				88E85FC9226C0DA600D39E29 /* MainSharePageViewController.swift in Sources */,
 				88C9F4BC224FA34A00FDAF0F /* WaterMarlkViewController.swift in Sources */,
 				18F5EFCB226B2D5B004E95C2 /* MenuOptionTblCell.swift in Sources */,
 				18F5EFD3226B2DA7004E95C2 /* Protocol.swift in Sources */,
-				18F5EFCF226B2D93004E95C2 /* HomeController.swift in Sources */,
+				18F5EFCF226B2D93004E95C2 /* MainPersonalController.swift in Sources */,
+				88E85FCB226C0E3900D39E29 /* MainUploadedViewController.swift in Sources */,
 				880C97D2224A66DB00034B36 /* RegisterViewController.swift in Sources */,
 				882B4D642266347E0046C0EC /* TutorialCollectionViewCell.swift in Sources */,
 				882B4D62226633C20046C0EC /* TutorialCollectionViewController.swift in Sources */,

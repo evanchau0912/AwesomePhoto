@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol HomeControllerDelegate {
+protocol PersonalControllerDelegate {
     func handleMenuToggle()
     
 }

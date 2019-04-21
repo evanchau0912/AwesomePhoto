@@ -29,7 +29,7 @@ class ContainerController: UIViewController{
     }
     
     func configHomeController(){
-        let homeController = HomeController()
+        let homeController = MainPersonalController()
         homeController.delegate = self
         centerController = UINavigationController(rootViewController: homeController)
         
@@ -63,7 +63,7 @@ class ContainerController: UIViewController{
     }
 }
 
-extension ContainerController: HomeControllerDelegate{
+extension ContainerController: PersonalControllerDelegate{
     func handleMenuToggle() {
         if !isExpand{
             configMenuController()
