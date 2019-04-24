@@ -33,7 +33,7 @@ class MainPersonalController:UIViewController{
         collectionView.delegate = self
         collectionView.dataSource = self
         //view.backgroundColor = .white
-        //configNavigationBar()
+        configNavigationBar()
     }
     
     override func viewDidLayoutSubviews() {
